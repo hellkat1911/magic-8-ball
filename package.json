@@ -1,0 +1,27 @@
+{
+  "name": "magic-8-ball",
+  "version": "1.0.2",
+  "description": "Magic 8-Ball emulator web app",
+  "private": true,
+  "scripts": {
+    "dev": "NODE_ENV=development PORT=21337 nodemon server.js",
+    "start": "NODE_ENV=production PORT=80 node server.js",
+    "test": "NODE_ENV=test PORT=21337 mocha --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hellkat1911/magic-8-ball.git"
+  },
+  "author": "Justin Yarbrough",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hellkat1911/magic-8-ball/issues"
+  },
+  "homepage": "https://github.com/hellkat1911/magic-8-ball#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.1",
+    "nodemon": "^2.0.3"
+  }
+}

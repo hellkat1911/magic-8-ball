@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <title>Magic 8-Ball</title>
+    <!-- styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="styles/styles.css" rel="stylesheet">
+    <!-- scripts -->
+    <script src="js/scripts.js" defer></script>
+  </head>
+  <body>
+    <main id="app">
+      <section id="header" class="app-section">
+        <h1>Magic 8-Ball</h1>
+        <img id="img" src="/assets/magic-8-ball.png" alt="Magic eight ball image" title="Magic 8-Ball">
+      </section>
+      <section id="output" class="app-section">
+        <h5 id="answer">
+          <!-- answer appears here -->
+        </h5>
+      </section>
+      <section id="input" class="app-section">
+        <form>
+          <input id="question" name="question" placeholder="Enter your yes/no question...">
+          <button id="submit" type="submit">Shake the Magic 8-Ball</button>
+        </form>
+      </section>
+      <section id="history" class="app-section">
+        <div id="table">
+          <div class="header">History of Luck</div>
+          <div class="row">Results will be shown here!</div>
+        </div>
+        <button id="delete">Delete History</button>
+      </section>
+    </main>
+    <script>
+      // init scripts with element ids
+      document.addEventListener("DOMContentLoaded", () => {
+        const { EightBall } = Module;
+
+        const config = {
+          img: 'img',
+          answer: 'answer',
+          question: 'question',
+          table: 'table',
+          submitBtn: 'submit',
+          deleteBtn: 'delete'
+        };
+
+        const app = new EightBall(config);
+        app.init();
+      });
+    </script>
+  </body>
+</html>
